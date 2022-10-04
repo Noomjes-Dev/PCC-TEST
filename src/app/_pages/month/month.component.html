@@ -1,0 +1,14 @@
+<select
+  class="form-control custom-select"
+  (ngModel)="(month)"
+  (change)="onMonthChange($event)"
+>
+  <option
+    *ngFor="let month of months"
+    [value]="month.value"
+    [selected]="month.value == monthNow"
+    [disabled]="month.value == monthNow"
+  >
+    {{ month.name }}
+  </option>
+</select>

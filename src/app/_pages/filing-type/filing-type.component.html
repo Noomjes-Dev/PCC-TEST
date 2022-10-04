@@ -1,0 +1,78 @@
+<!-- <p>filing-type works!</p> -->
+<div class="card">
+  <div class="card-body">
+    <div class="form-group1">
+      <h4 class="form1-title">1. Tax Filling Details</h4>
+      <hr />
+      <div class="row input-group-radio mb-3">
+        <span class="" id="basic-addon1">Type of filing *</span>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="inlineRadioOptions"
+          id="inlineRadio1"
+          value="option1"
+          checked
+        />
+        <label class="form-check-label" for="inlineRadio1"
+          >Ordinary Filing ?</label
+        >
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="inlineRadioOptions"
+          id="inlineRadio2"
+          value="option2"
+        />
+        <label class="form-check-label" for="inlineRadio2"
+          >Addintional Filing ?</label
+        >
+      </div>
+      <div class="row datepicker my-3">
+        <div class="col-sm-12 col-md-12 col-lg-12 mb-3">
+          <span class="" id="basic-addon1">Vat Month*</span>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 my-1">
+          <app-month></app-month>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 my-1">
+          <app-year></app-year>
+        </div>
+      </div>
+    </div>
+    <div class="form-group2">
+      <div class="row title justify-content-between">
+        <div class="col">
+          <h4 class="form2-title">2. Tax Computation</h4>
+        </div>
+        <div class="col">
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            >View Exchange Rate</a
+          >
+        </div>
+      </div>
+      <hr />
+      <span class="fw-bold">Provide total taxable electronic service*</span>
+      <section id="taxComputation">
+        <app-sale-amount></app-sale-amount>
+        <app-tax-amount></app-tax-amount>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="button-group d-flex m-3 gap-2">
+  <button type="button" class="btn btn-light rounded shadow" disabled>
+    Back
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary rounded shadow"
+    (click)="nextPage()"
+  >
+    Next
+  </button>
+</div>
